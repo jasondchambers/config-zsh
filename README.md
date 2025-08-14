@@ -1,5 +1,9 @@
 ## config-zsh
 
+### TODO
+
+Support macOS
+
 ### Pre-requisities
 - [zsh](https://www.zsh.org/) (Omarchy default is bash - but use zsh instead)
 - [starship.rs](https://starship.rs/)
