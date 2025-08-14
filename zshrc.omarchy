@@ -46,6 +46,16 @@ def configure_aliases() {
    alias ls='eza' # Use eza instead of ls https://github.com/eza-community/eza 
    alias vim='nvim' # Too many years of typing vi and vim
    alias vi='nvim' # Too many years of typing vi and vim
+   alias sshmacbookprowifi="ssh jasonchambers@10.27.27.4"
+   alias sshimacwifi="ssh jasonchambers@10.27.27.5"
+   alias sshmacbookpro="ssh jasonchambers@10.27.27.6"
+   alias sshimac="ssh jasonchambers@10.27.27.7"
+   alias sshmeerkat="ssh jason@10.27.27.8"
+   alias sftpmacbookprowifi="sftp jasonchambers@10.27.27.4"
+   alias sftpimacwifi="sftp jasonchambers@10.27.27.5"
+   alias sftpmacbookpro="sftp jasonchambers@10.27.27.6"
+   alias sftpimac="sftp jasonchambers@10.27.27.7"
+   alias sftpmeerkat="sftp jason@10.27.27.8"
 }
 
 configure_history
