@@ -29,9 +29,11 @@ main() {
 
   if [ -e zshrc.omarchy ]; then
     if [ -f /etc/arch-release ]; then
+      echo "Omarchy detected"
       point_zsh_to_this_config zshrc.omarchy
-    else
-      echo "Not yet supported on anything other than Omarchy at this point"
+    elif [[ $(uname) == "Darwin" ]]; then
+      echo "macOS detected"
+      point_zsh_to_this_config zshrc.macOS
     fi
   else
     echo "You need to run this script from within the config-zsh directory"
