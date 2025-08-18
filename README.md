@@ -13,6 +13,15 @@
 - [Homebrew](https://brew.sh) (for macOS only)
 - python-pipx (needed for uv)
 
+### Cheatsheet
+
+fd instead of find
+rg instead of grep
+fzf: kill -9 \*\*\<tab\> to quickly find and kill a process
+fzf: cd \*\*\<tab\> to quickly cd into a directory
+fzf: \<Ctrl\>r to quickly search command history
+&rarr; to accept a zsh auto suggestion
+
 ### Installation 
 
     ./install.sh
