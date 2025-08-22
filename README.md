@@ -19,6 +19,10 @@ fd instead of find
 
 rg instead of grep
 
+btop instead of top
+
+bat instead of cat
+
 fzf: kill -9 \*\*\<tab\> to quickly find and kill a process
 
 fzf: cd \*\*\<tab\> to quickly cd into a directory
