@@ -27,6 +27,8 @@ fzf: \<Ctrl\>r to quickly search command history
 
 &rarr; to accept a zsh auto suggestion
 
+typora Render a markdown file (Omarchy)
+
 ### Installation 
 
     ./install.sh
