@@ -7,6 +7,7 @@
 - [ripgrep](https://github.com/BurntSushi/ripgrep)
 - [fd](https://github.com/sharkdp/fd)
 - [eza](https://github.com/eza-community/eza)
+- [zoxide](https://github.com/ajeetdsouza/zoxide)
 - [Catppuccin theme for bat](https://github.com/catppuccin/bat)
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
 - [Neovim](https://neovim.io)
@@ -22,6 +23,8 @@ rg instead of grep
 btop instead of top
 
 bat instead of cat
+
+z instead of cd (for commonly used directories)
 
 fzf: kill -9 \*\*\<tab\> to quickly find and kill a process
 

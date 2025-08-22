@@ -72,6 +72,10 @@ def configure_aliases() {
    alias prox_down="kill -9 \$(ps aux | grep \"tsh proxy\" | awk '{print \$2}')"
 }
 
+def configure_zoxide() { 
+  eval "$(zoxide init zsh)"
+}
+
 configure_brew
 configure_history
 configure_starship
@@ -80,3 +84,4 @@ configure_bat_theme
 configure_zsh_autosuggestions
 configure_aliases
 configure_fzf
+configure_zoxide
