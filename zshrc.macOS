@@ -70,6 +70,8 @@ def configure_aliases() {
      #tsh login --proxy=cylera.teleport.sh (trap 'kill 0' SIGINT; prox_up wait) 
    #} 
    alias prox_down="kill -9 \$(ps aux | grep \"tsh proxy\" | awk '{print \$2}')"
+   alias typora="open -a typora"
+
 }
 
 def configure_zoxide() { 
