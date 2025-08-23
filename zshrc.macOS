@@ -74,6 +74,10 @@ def configure_aliases() {
 
 }
 
+def configure_path() {
+  export PATH="$HOME/repos/utils:$PATH"
+}
+
 def configure_zoxide() { 
   eval "$(zoxide init zsh)"
 }
@@ -86,4 +90,5 @@ configure_bat_theme
 configure_zsh_autosuggestions
 configure_aliases
 configure_fzf
+configure_path
 configure_zoxide
