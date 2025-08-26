@@ -58,13 +58,24 @@ def configure_aliases() {
    alias sftpmeerkat="sftp jason@10.27.27.8"
 }
 
+def configure_path() {
+  export PATH="$HOME/repos/utils:$PATH"
+}
+
+def configure_zoxide() { 
+  eval "$(zoxide init zsh)"
+}
+
 configure_history
 configure_starship
-configure_fzf
 configure_command_line_editing_to_vim
 configure_bat_theme
 configure_zsh_autosuggestions
 configure_aliases
+configure_fzf
+configure_path
+configure_zoxide
+
 # Created by `pipx` on 2025-07-31 21:09:32
 export PATH="$PATH:/home/jasonchambers/.local/bin"
 
