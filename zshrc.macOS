@@ -58,6 +58,7 @@ def configure_aliases() {
    alias sftpimac="sftp jasonchambers@10.27.27.7"
    alias sftpmeerkat="sftp jason@10.27.27.8" 
    # Teleport to enable connections into the cloud
+   alias proxy_up_demo="tsh proxy db --tunnel --port 60003 --db-name webapi --db-user teleport-admin@cylera-demo-us1.iam cylera-demo-us1-customer-rr"
    alias proxy_up="tsh proxy db --tunnel --port 60002 --db-name webapi --db-user teleport-admin@cylera-demo-us1.iam cylera-demo-us1-customer & \ 
      tsh proxy db --tunnel --port 60003 --db-name webapi --db-user teleport-admin@cylera-demo-us1.iam cylera-demo-us1-customer-rr & \ 
      tsh proxy db --tunnel --port 60005 --db-name webapi --db-user teleport-admin@cylera-dev-us.iam cylera-dev-us-customer & \ 
