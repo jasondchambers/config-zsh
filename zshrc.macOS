@@ -3,7 +3,11 @@
 # - See README.md
 
 def configure_brew() { 
-  eval "$(/usr/bin/env brew shellenv)"
+  if [ -f /opt/homebrew/bin/brew ]; then 
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  else 
+    eval "$(/usr/bin/env brew shellenv)"
+  fi
   export PATH="$(brew --prefix openssh)/bin:$PATH"
 }
 
