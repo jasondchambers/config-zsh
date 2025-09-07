@@ -56,7 +56,7 @@ def configure_aliases() {
    alias sshimacwifi="ssh jasonchambers@10.27.27.5"
    alias sshthelio="ssh jasonchambers@10.27.27.9"
    alias sshimac="ssh jasonchambers@10.27.27.7"
-   alias sshmeerkat="ssh jason@10.27.27.8"
+   alias sshmeerkat="ssh jasonchambers@10.27.27.8"
    alias sftpimacwifi="sftp jasonchambers@10.27.27.5"
    alias sftpthelio="sftp jasonchambers@10.27.27.9"
    alias sftpimac="sftp jasonchambers@10.27.27.7"
