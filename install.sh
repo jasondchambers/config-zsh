@@ -30,10 +30,21 @@ main() {
   if [ -e zshrc.omarchy ]; then
     if [ -f /etc/arch-release ]; then
       echo "Omarchy detected"
-      point_zsh_to_this_config zshrc.omarchy
+      point_zsh_to_this_config zshrc.omarchy 
+    elif [ -f /etc/os-release ]; then 
+      ID=$(awk -F= '/^ID=/{gsub(/"/, "", $2); print $2}' /etc/os-release) 
+      echo "$ID"
+      if [ "$ID" = "linuxmint" ]; then 
+        echo "Installing for Linux Mint" 
+        point_zsh_to_this_config zshrc.linuxmint
+      else 
+        echo "Unsupported OS"
+      fi
     elif [[ $(uname) == "Darwin" ]]; then
       echo "macOS detected"
-      point_zsh_to_this_config zshrc.macOS
+      point_zsh_to_this_config zshrc.macOS 
+    else 
+      echo "Unsupported OS"
     fi
   else
     echo "You need to run this script from within the config-zsh directory"
