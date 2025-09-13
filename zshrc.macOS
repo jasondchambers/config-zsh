@@ -49,21 +49,11 @@ def configure_zsh_autosuggestions() {
    source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 }
 
-def configure_aliases() {
-   alias ls='ls -G'
-   alias vim='nvim' # Too many years of typing vi and vim
-   alias vi='nvim' # Too many years of typing vi and vim
-   alias sshimacwifi="ssh jasonchambers@10.27.27.5"
-   alias sshthelio="ssh jasonchambers@10.27.27.9"
-   alias sshimac="ssh jasonchambers@10.27.27.7"
-   alias sshmeerkat="ssh jasonchambers@10.27.27.8"
-   alias sftpimacwifi="sftp jasonchambers@10.27.27.5"
-   alias sftpthelio="sftp jasonchambers@10.27.27.9"
-   alias sftpimac="sftp jasonchambers@10.27.27.7"
-   alias sftpmeerkat="sftp jason@10.27.27.8" 
-   # Teleport to enable connections into the cloud
-   alias proxy_up_demo="tsh proxy db --tunnel --port 60003 --db-name webapi --db-user teleport-admin@cylera-demo-us1.iam cylera-demo-us1-customer-rr"
-   alias proxy_up="tsh proxy db --tunnel --port 60002 --db-name webapi --db-user teleport-admin@cylera-demo-us1.iam cylera-demo-us1-customer & \ 
+def configure_aliases() { 
+  source ~/repos/config-zsh/aliases.sh
+  # Teleport to enable connections into the cloud
+  alias proxy_up_demo="tsh proxy db --tunnel --port 60003 --db-name webapi --db-user teleport-admin@cylera-demo-us1.iam cylera-demo-us1-customer-rr"
+  alias proxy_up="tsh proxy db --tunnel --port 60002 --db-name webapi --db-user teleport-admin@cylera-demo-us1.iam cylera-demo-us1-customer & \ 
      tsh proxy db --tunnel --port 60003 --db-name webapi --db-user teleport-admin@cylera-demo-us1.iam cylera-demo-us1-customer-rr & \ 
      tsh proxy db --tunnel --port 60005 --db-name webapi --db-user teleport-admin@cylera-dev-us.iam cylera-dev-us-customer & \ 
      tsh proxy db --tunnel --port 60006 --db-name webapi --db-user teleport-admin@cylera-dev-us.iam cylera-dev-us-customer-rr & \ 
@@ -71,12 +61,11 @@ def configure_aliases() {
      tsh proxy db --tunnel --port 60012 --db-name cylera --db-user teleport-admin@cylera-prod-infra.iam cylera-prod-infra-customer-rr & \ 
      tsh proxy db --tunnel --port 60010 --db-name webapi --db-user teleport-admin@cylera-prod-uk.iam cylera-prod-uk-customer & \ 
      tsh proxy db --tunnel --port 60011 --db-name webapi --db-user teleport-admin@cylera-prod-uk.iam cylera-prod-uk-customer-rr" 
-   #function prox () { 
-     #tsh login --proxy=cylera.teleport.sh (trap 'kill 0' SIGINT; prox_up wait) 
-   #} 
-   alias prox_down="kill -9 \$(ps aux | grep \"tsh proxy\" | awk '{print \$2}')"
-   alias typora="open -a typora"
-
+  #function prox () { 
+    #tsh login --proxy=cylera.teleport.sh (trap 'kill 0' SIGINT; prox_up wait) 
+  #} 
+  alias prox_down="kill -9 \$(ps aux | grep \"tsh proxy\" | awk '{print \$2}')"
+  alias typora="open -a typora"
 }
 
 def configure_path() {
