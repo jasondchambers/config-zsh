@@ -45,19 +45,7 @@ def configure_zsh_autosuggestions() {
 }
 
 def configure_aliases() {
-   alias ls='eza' # Use eza instead of ls https://github.com/eza-community/eza 
-   alias vim='nvim' # Too many years of typing vi and vim
-   alias vi='nvim' # Too many years of typing vi and vim
-   alias sshmacbookprowifi="ssh jasonchambers@10.27.27.4"
-   alias sshimacwifi="ssh jasonchambers@10.27.27.5"
-   alias sshmacbookpro="ssh jasonchambers@10.27.27.6"
-   alias sshimac="ssh jasonchambers@10.27.27.7"
-   alias sshthelio="ssh jasonchambers@10.27.27.9"
-   alias sftpmacbookprowifi="sftp jasonchambers@10.27.27.4"
-   alias sftpimacwifi="sftp jasonchambers@10.27.27.5"
-   alias sftpmacbookpro="sftp jasonchambers@10.27.27.6"
-   alias sftpimac="sftp jasonchambers@10.27.27.7"
-   alias sftpthelio="sftp jasonchambers@10.27.27.9"
+  source ~/repos/config-zsh/aliases.sh
 }
 
 def configure_path() {
