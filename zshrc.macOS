@@ -70,6 +70,7 @@ def configure_aliases() {
 
 def configure_path() {
   export PATH="$HOME/repos/utils:$PATH"
+  source $HOME/.local/bin/env
 }
 
 def configure_zoxide() { 
@@ -86,3 +87,5 @@ configure_aliases
 configure_fzf
 configure_path
 configure_zoxide
+
+. "$HOME/.local/bin/env"
