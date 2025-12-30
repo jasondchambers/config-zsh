@@ -77,6 +77,24 @@ def configure_zoxide() {
   eval "$(zoxide init zsh)"
 }
 
+def python_hook() {
+  if [[ -d .venv ]]; then
+    echo "Auto activating venv"
+    source .venv/bin/activate
+  elif [[ -d venv ]]; then
+    echo "Auto activating venv"
+    source venv/bin/activate
+  elif [[ -n "$VIRTUAL_ENV" ]]; then
+    deactivate
+  fi
+}
+
+def configure_zsh_chpwd_hooks() { 
+  autoload -Uz add-zsh-hook 
+  add-zsh-hook chpwd python_hook
+}
+
+
 configure_brew
 configure_history
 configure_starship
@@ -87,5 +105,6 @@ configure_aliases
 configure_fzf
 configure_path
 configure_zoxide
+configure_zsh_chpwd_hooks
 
 . "$HOME/.local/bin/env"
