@@ -24,6 +24,10 @@ def configure_starship() {
    eval "$(starship init zsh)"
 }
 
+def configure_zsh_syntax_highlighting() { 
+  source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+}
+
 # Integrates the power of fzf with the shell
 # https://github.com/junegunn/fzf?tab=readme-ov-file#key-bindings-for-command-line
 def configure_fzf() { 
@@ -106,5 +110,6 @@ configure_fzf
 configure_path
 configure_zoxide
 configure_zsh_chpwd_hooks
+configure_zsh_syntax_highlighting
 
 . "$HOME/.local/bin/env"
