@@ -44,6 +44,7 @@ def configure_zsh_autosuggestions() {
 
 def configure_aliases() { 
   source ~/repos/config-zsh/aliases.sh
+  alias tree='treex'
 }
 
 def configure_path() {
