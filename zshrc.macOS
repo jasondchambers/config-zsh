@@ -129,3 +129,7 @@ configure_zsh_chpwd_hooks
 configure_zsh_syntax_highlighting
 
 . "$HOME/.local/bin/env"
+
+# Run chpwd-style hooks on shell init
+python_hook
+doppler_hook
