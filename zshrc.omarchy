@@ -60,10 +60,10 @@ def configure_zoxide() {
 }
 
 def python_hook() {
-  if [[ -d .venv ]]; then
+  if [[ -f .venv/bin/activate ]]; then
     echo "Auto activating venv"
     source .venv/bin/activate
-  elif [[ -d venv ]]; then
+  elif [[ -f venv/bin/activate ]]; then
     echo "Auto activating venv"
     source venv/bin/activate
   elif [[ -n "$VIRTUAL_ENV" ]]; then
@@ -102,6 +102,10 @@ configure_fzf
 configure_path
 configure_zoxide
 configure_zsh_chpwd_hooks
+
+# Run chpwd-style hooks on shell init
+python_hook
+doppler_hook
 
 # Created by `pipx` on 2025-07-31 21:09:32
 export PATH="$PATH:/home/jasonchambers/.local/bin"
