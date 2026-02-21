@@ -70,6 +70,10 @@ def configure_aliases() {
   #} 
   alias prox_down="kill -9 \$(ps aux | grep \"tsh proxy\" | awk '{print \$2}')"
   alias typora="open -a typora"
+  function doppler() {
+    command doppler "$@"
+    source ~/repos/utils/update-doppler-in-prompt
+  }
 }
 
 def configure_path() {
